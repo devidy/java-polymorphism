@@ -5,34 +5,50 @@ import java.util.Arrays;
 public class Main {
 
     public static void main(String[] args) {
-      newManager();
+      ControlsBonus controlsBonus = new ControlsBonus();
+      controlsBonus.register(newManager());
+      controlsBonus.register(newDesigner());
+      controlsBonus.register(newVideoEditor());
+
+      System.out.println(controlsBonus.getSum());
     }
 
-    public static void newManager() {
+    public static Manager newManager() {
       Manager manager = new Manager();
       manager.setName("Marco Túlio");
       manager.setCpf("546456546");
       manager.setSalary(9000.00);
 
-      System.out.println(manager.getName());
-      System.out.println(manager.getCpf());
-      System.out.println(manager.getSalary());
-
-      manager.setPassword(5454);
-
-      System.out.println(manager.authenticate(5454));
-      System.out.println(manager.getBonus());
+      return manager;
     }
 
-    public static void newEmployee() {
-      Employee employee = new Employee();
+  public static Designer newDesigner() {
+    Designer designer = new Designer();
 
-      employee.setName("Devidy Oliveira");
-      employee.setCpf("9804209238");
-      employee.setSalary(8442.87);
+    designer.setName("Marco Túlio");
+    designer.setCpf("546456546");
+    designer.setSalary(9000.00);
 
-      System.out.println(employee.getName());
-      System.out.println(employee.getBonus());
+    return designer;
+  }
 
-    }
+  public static VideoEditor newVideoEditor() {
+    VideoEditor videoEditor = new VideoEditor();
+
+    videoEditor.setName("Marco Túlio");
+    videoEditor.setCpf("546456546");
+    videoEditor.setSalary(9000.00);
+
+    return videoEditor;
+  }
+
+  public static Employee newEmployee() {
+    Employee employee = new Employee();
+
+    employee.setName("Devidy Oliveira");
+    employee.setCpf("9804209238");
+    employee.setSalary(8442.87);
+
+    return employee;
+  }
 }
