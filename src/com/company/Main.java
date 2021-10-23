@@ -41,14 +41,4 @@ public class Main {
 
     return videoEditor;
   }
-
-  public static Employee newEmployee() {
-    Employee employee = new Employee();
-
-    employee.setName("Devidy Oliveira");
-    employee.setCpf("9804209238");
-    employee.setSalary(8442.87);
-
-    return employee;
-  }
 }
